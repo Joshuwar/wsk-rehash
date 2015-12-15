@@ -1,0 +1,19 @@
+// Breakpoints 
+
+// screen widths for 2-layer responsive breakpoint variables
+// [see http://craigmdennis.com/articles/better-sass-variables for discussion of this approach]
+
+$xxs-screen:	320px; 
+$xs-screen:		480px;
+$s-screen:		620px;
+$s-m-screen:	767px;
+$m-screen:		800px;
+$m-l-screen:	960px;
+$l-screen:		1280px;
+$xl-screen:		1400px;
+$xxl-screen:	1600px;
+
+$up-to-small: new-breakpoint(max-width $s-m-screen 2);
+$small-plus: 	new-breakpoint(min-width $s-screen 8);
+$up-to-large: new-breakpoint(max-width $l-screen 8);
+$large-plus: 	new-breakpoint(min-width $m-l-screen 12);

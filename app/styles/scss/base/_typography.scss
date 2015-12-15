@@ -1,0 +1,80 @@
+body {
+  @include font-feature-settings("kern", "liga", "pnum");
+  -webkit-font-smoothing: antialiased;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  @include media($small-plus) {
+		//font-size: $base-font-size/2;
+  	//line-height: $base-line-height/2;		
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $heading-font-size;
+  line-height: $heading-line-height;
+  letter-spacing: $heading-font-spacing;
+  margin: 0 0 $small-spacing;
+  text-transform: uppercase;
+  font-weight: $heading-font-weight; 
+}
+
+p {
+  margin: 0 0 $small-spacing;
+  @include media($large-plus) {
+  }
+}
+
+a, a:visited {
+  color: $colourBlack;
+  text-decoration: none;
+  transition: all 0.1s linear;
+  border-bottom: 1px solid transparent;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $colourGreyDark;
+    // border-bottom: 1px solid $colourGrey;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+p a {
+  border-bottom: $dark-border;
+}
+
+.link-style {
+	border-bottom: $dark-border;	
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-spacing 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+// class to add space between nav and top header
+.page-header {
+	padding: $small-spacing*1.25 0 0; 
+	margin: 0; // cancels default margins
+}

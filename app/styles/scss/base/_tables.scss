@@ -1,0 +1,31 @@
+table {
+  @include font-feature-settings("kern", "liga", "tnum");
+  font-size: $base-font-size /1.1;
+  border-collapse: collapse;
+  margin: 0 0 $small-spacing 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+th {
+  border-bottom: $base-border;
+  font-weight: 500;
+  padding: $small-spacing 0;
+  text-align: left;
+}
+
+td {
+  border-bottom: $light-border;
+  padding: $small-spacing/2 0;
+}
+
+tr,
+td,
+th {
+  vertical-align: top;
+}
+
+// apply bottom border to table instead of individual cells
+tr:last-child td {
+  border-bottom: none;
+}

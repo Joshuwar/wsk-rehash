@@ -1,0 +1,14 @@
+@function get-opposite($direction) {
+	$opposite: right;
+	@if $direction == 'right' {
+		$opposite: left;
+	}
+	@return $opposite;
+}
+@function get-opposite-padding($direction) {
+	$opposite-padding: padding-right;
+	@if $direction == 'right' {
+		$opposite-padding: padding-left;
+	}
+	@return $opposite-padding;
+}
